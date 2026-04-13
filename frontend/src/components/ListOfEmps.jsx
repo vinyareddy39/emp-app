@@ -45,34 +45,36 @@ function ListOfEmps() {
 
   return (
     <div>
-      <h1 className="text-4xl text-center mb-10 font-serif">List of Employees</h1>
+      <h1 className="text-4xl font-light text-zinc-900 mb-10 text-center tracking-tight">List of Employees</h1>
 
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {emps.map((empObj) => (
           <div
             key={empObj._id}
-            className="bg-violet-300 p-5 rounded-3xl text-center"
+            className="bg-white p-6 rounded-2xl border border-zinc-200 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col justify-between"
           >
-            <p className="font-bold text-xl">{empObj.name}</p>
-            <p>{empObj.email}</p>
+            <div className="mb-6">
+              <p className="font-medium text-xl text-zinc-900 mb-1">{empObj.name}</p>
+              <p className="text-zinc-500 text-sm">{empObj.email}</p>
+            </div>
 
-            <div className="flex justify-around mt-4">
+            <div className="flex justify-between gap-2 border-t border-zinc-100 pt-4 cursor-auto">
               <button
-                className="bg-blue-400 p-3 rounded-2xl"
+                className="flex-1 py-2 text-sm font-medium border border-zinc-300 text-zinc-700 rounded-lg hover:bg-zinc-50 hover:text-zinc-900 transition-colors"
                 onClick={() => gotoEmployee(empObj)}
               >
                 View
               </button>
 
               <button
-                className="bg-green-400 p-3 rounded-2xl"
+                className="flex-1 py-2 text-sm font-medium border border-zinc-300 text-zinc-700 rounded-lg hover:bg-zinc-50 hover:text-zinc-900 transition-colors"
                 onClick={() => gotoEditEmployee(empObj)}
               >
                 Edit
               </button>
 
               <button
-                className="bg-red-400 p-3 rounded-2xl"
+                className="flex-1 py-2 text-sm font-medium border border-red-200 text-red-600 rounded-lg hover:bg-red-50 transition-colors"
                 onClick={() => deleteEmpById(empObj._id)}
               >
                 Delete

@@ -39,48 +39,48 @@ function EditEmployee() {
   };
 
   return (
-    <div>
-      <h1 className="text-center text-4xl mb-9">Edit Employee</h1>
+    <div className="max-w-md mx-auto bg-white p-8 rounded-2xl shadow-sm border border-zinc-200">
+      <h1 className="text-center text-3xl font-light text-zinc-900 mb-8 tracking-tight">Edit Employee</h1>
 
-      {error && <p className="text-red-600 text-center">{error}</p>}
+      {error && <p className="text-red-500 text-center mb-6">{error}</p>}
 
       <form
-        className="w-full max-w-md mx-auto"
+        className="w-full"
         onSubmit={handleSubmit(saveModifiedEmp)}
       >
         <input
           type="text"
           placeholder="Enter the name"
           {...register("name")}
-          className="mb-3 border p-3 w-full rounded-2xl"
+          className="mb-4 bg-zinc-50 border border-zinc-200 p-3 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:border-transparent transition-all"
         />
         <input
           type="email"
           placeholder="Enter the email"
           {...register("email")}
-          className="mb-3 border p-3 w-full rounded-2xl"
+          className="mb-4 bg-zinc-50 border border-zinc-200 p-3 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:border-transparent transition-all"
         />
         <input
           type="text"
           placeholder="Enter the mobile number"
           {...register("mobile")}
-          className="mb-3 border p-3 w-full rounded-2xl"
+          className="mb-4 bg-zinc-50 border border-zinc-200 p-3 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:border-transparent transition-all"
         />
         <input
           type="text"
           placeholder="Enter the designation"
           {...register("designation")}
-          className="mb-3 border p-3 w-full rounded-2xl"
+          className="mb-4 bg-zinc-50 border border-zinc-200 p-3 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:border-transparent transition-all"
         />
         <input
           type="text"
           placeholder="Enter the Company Name"
           {...register("companyName")}
-          className="mb-3 border p-3 w-full rounded-2xl"
+          className="mb-6 bg-zinc-50 border border-zinc-200 p-3 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:border-transparent transition-all"
         />
         <button
           type="submit"
-          className="block mx-auto p-4 bg-violet-300 rounded-3xl hover:bg-indigo-300"
+          className="w-full py-3 bg-zinc-900 text-white rounded-lg hover:bg-zinc-800 hover:-translate-y-0.5 active:translate-y-0 transition-all font-medium shadow-sm"
         >
           Save
         </button>

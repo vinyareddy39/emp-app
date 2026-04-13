@@ -3,9 +3,9 @@ import { Outlet } from "react-router-dom";
 
 function RootLayout() {
   return (
-    <div className="bg-linear-to-t from-blue-200 to-purple-300 min-h-screen">
+    <div className="bg-zinc-50 min-h-screen text-zinc-900 font-sans">
       <Header />
-      <div className="mx-0 sm:mx-5 md:mx-10 lg:mx-20 p-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Outlet />
       </div>
     </div>
